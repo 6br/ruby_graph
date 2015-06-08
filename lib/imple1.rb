@@ -11,7 +11,7 @@ class NodeMatrix
   def initialize size=0
     @matrix = Array.new(size){ Array.new(size,0) }
     @size = size
- end
+  end
 
   # @param first [Fixnum] 最初のノード
   # @param second [Fixnum] 次のノード
