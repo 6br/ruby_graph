@@ -23,6 +23,3 @@ PLATFORMS
 DEPENDENCIES
   rspec (>= 3.0.0)
   yard
-
-BUNDLED WITH
-   1.10.3
