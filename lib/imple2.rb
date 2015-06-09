@@ -31,7 +31,7 @@ class NodeMapper
 
   # @param first [Fixnum] 最初のノード
   # @param second [Fixnum] 次のノード
-  def add(first, second)
+  def add(first:, second:)
     @node[first] ||= Node.new first
     @node[first].edges.push(second).uniq!
     @node[second] ||= Node.new second

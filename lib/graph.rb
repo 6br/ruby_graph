@@ -23,7 +23,6 @@ class RandomNodeGenerate
 
   private
     def random_generate(size)
-      first = rand(size)
-      second = rand(size)
+      {first: rand(size),second: rand(size)}
     end
 end

@@ -39,6 +39,9 @@ RSpec.describe NodeMatrix do
       expect{ network.add({first:1,second:2}) }.to change{ network.list }.from("").to("2 1\n")
     end
     it "raises error when exceed node size" do
+      expect{network.add({first:11,second:11})}.to raise_error
+    end
+    it "raises error when exceed node size" do
       expect{network.add(11,11)}.to raise_error
     end
     it "raises error when it obtains any hash or str" do
