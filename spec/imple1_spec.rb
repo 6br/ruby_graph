@@ -18,14 +18,14 @@ RSpec.describe NodeMatrix do
     end
     it "yields all node" do
       network = NodeMatrix.new 10
-      network.add(1,2)
-      network.add(3,4)
+      network.add({first:1,second:2})
+      network.add({first:3,second:4})
       expect(network.list).to eq "2 1\n4 3\n"
     end
     it "has no duplication" do
       network = NodeMatrix.new 10
-      network.add(1,2)
-      network.add(2,1)
+      network.add({first:1,second:2})
+      network.add({first:2,second:1})
       expect(network.list).to eq "2 1\n"
     end
   end
@@ -36,7 +36,7 @@ RSpec.describe NodeMatrix do
     end
     it "changes the length of list" do
       network = NodeMatrix.new 10
-      expect{ network.add(1,2) }.to change{ network.list }.from("").to("2 1\n")
+      expect{ network.add({first:1,second:2}) }.to change{ network.list }.from("").to("2 1\n")
     end
     it "raises error when exceed node size" do
       expect{network.add(11,11)}.to raise_error

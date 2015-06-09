@@ -15,7 +15,7 @@ class NodeMatrix
 
   # @param first [Fixnum] 最初のノード
   # @param second [Fixnum] 次のノード
-  def add(first, second)
+  def add(first:, second:)
     @matrix[first][second]=1
     @matrix[second][first]=1
   end
