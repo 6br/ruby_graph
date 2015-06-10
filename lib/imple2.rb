@@ -5,7 +5,7 @@ class Node
   # @return  [Array] エッジの集合
   attr_accessor :edges
 
-  # @param [Fixnum] Node id
+  # @param [Fixnum] id Node id
   #
   # @return [Object] Node Object
   def initialize id
@@ -15,6 +15,7 @@ class Node
 
 end
 
+# ノードを管理するクラス
 class NodeMapper
   # @return [Fixnum] ノード数
   attr_reader :size
@@ -38,6 +39,7 @@ class NodeMapper
     @node[second].edges.push(first).uniq!
   end
 
+  # @return [String] エッジリスト
   def list
     str = ""
     @size.times do |i|
